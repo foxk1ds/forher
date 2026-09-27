@@ -43,7 +43,7 @@ export function Hero() {
       id="top"
       className="relative flex min-h-[100svh] flex-col items-center justify-center px-6 py-28 text-center"
     >
-      <Sparkle className="absolute left-[14%] top-[22%] h-5 w-5 rotate-[14deg] text-olive/45 sm:h-6 sm:w-6" />
+      <Sparkle className="absolute left-[13%] top-[21%] h-5 w-5 rotate-[14deg] text-gold/50 sm:h-6 sm:w-6" />
 
       <motion.p {...eyebrow} className="font-hand text-lg text-ink-faint sm:text-xl">
         открытка без повода
@@ -51,7 +51,7 @@ export function Hero() {
 
       <h1
         aria-label={NAME}
-        className="mt-5 flex justify-center font-display text-[4.4rem] leading-[0.98] text-ink sm:mt-7 sm:text-[6.6rem] lg:text-[9rem]"
+        className="mt-4 flex justify-center font-display text-[5rem] leading-[0.92] text-ink sm:mt-6 sm:text-[7.4rem] lg:text-[10rem]"
       >
         {[...NAME].map((letter, i) => {
           const jitter = LETTER_JITTER[i % LETTER_JITTER.length]
@@ -97,10 +97,10 @@ export function Hero() {
         })}
       </h1>
 
-      <div className="relative mt-4 sm:mt-6">
+      <div className="relative mt-3 sm:mt-5">
         <motion.p
           {...tagline}
-          className="font-hand text-2xl text-rose-deep sm:text-3xl lg:text-4xl"
+          className="font-hand text-2xl text-rose sm:text-3xl lg:text-4xl"
         >
           ты лучшая подруга
         </motion.p>
@@ -108,7 +108,7 @@ export function Hero() {
         <motion.div {...squiggle}>
           <Squiggle
             delay={DELAY.squiggle}
-            className="mx-auto mt-1.5 h-3 w-44 text-terracotta/55 sm:w-56"
+            className="mx-auto mt-1.5 h-3 w-44 text-terracotta/70 sm:w-56"
           />
         </motion.div>
       </div>
@@ -135,11 +135,11 @@ export function Hero() {
               : { duration: 3.8, repeat: Infinity, ease: 'easeInOut', times: [0, 0.55, 1] }
           }
         >
-          <ArrowDown delay={DELAY.hint + 0.2} className="h-12 w-7 text-rose-deep/75" />
+          <ArrowDown delay={DELAY.hint + 0.2} className="h-12 w-7 text-rose/80" />
         </motion.span>
       </motion.div>
 
-      <Cross className="absolute bottom-[16%] right-[13%] h-6 w-6 -rotate-12 text-terracotta/35" />
+      <Cross className="absolute bottom-[15%] right-[12%] h-6 w-6 -rotate-12 text-terracotta/45" />
     </section>
   )
 }

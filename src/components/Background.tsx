@@ -1,7 +1,7 @@
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 
 /**
- * Лист бумаги: припылённый фон, неровные водяные разливы
+ * Тёмный лист: тёплые разливы вместо ровных кругов, свет лампы по центру
  * и два слоя текстуры — мелкое зерно и крупное волокно.
  */
 export function Background() {
@@ -15,28 +15,29 @@ export function Background() {
 
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-paper via-paper to-paper-deep" />
+      <div className="absolute inset-0 bg-gradient-to-b from-night-soft via-night to-night" />
 
       <motion.div
         style={reduced ? undefined : { y: driftFar }}
-        className="stain absolute -left-[16rem] -top-[12rem] h-[40rem] w-[46rem] bg-terracotta/12"
+        className="stain absolute -left-[16rem] -top-[12rem] h-[40rem] w-[46rem] bg-terracotta/10"
       />
 
       <motion.div
         style={reduced ? undefined : { y: driftMid }}
-        className="stain absolute -right-[18rem] top-[38rem] h-[38rem] w-[42rem] bg-olive/12"
+        className="stain absolute -right-[18rem] top-[38rem] h-[38rem] w-[42rem] bg-gold/9"
       />
 
       <motion.div
         style={reduced ? undefined : { y: driftNear }}
-        className="stain absolute -bottom-[14rem] left-[14%] h-[32rem] w-[38rem] bg-rose/14"
+        className="stain absolute -bottom-[14rem] left-[14%] h-[32rem] w-[38rem] bg-rose/8"
       />
 
-      {/* Края листа темнее — старая бумага. */}
-      <div className="absolute inset-0 bg-[radial-gradient(128%_96%_at_48%_38%,transparent_52%,rgba(96,72,46,0.11)_100%)]" />
+      {/* Свет настольной лампы сверху и затемнение к краям листа. */}
+      <div className="absolute inset-0 bg-[radial-gradient(120%_80%_at_50%_0%,rgba(201,127,85,0.07),transparent_58%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(132%_100%_at_50%_45%,transparent_42%,rgba(0,0,0,0.55)_100%)]" />
 
-      <div className="paper-overlay tex-fiber opacity-[0.05]" />
-      <div className="paper-overlay tex-grain opacity-[0.06]" />
+      <div className="paper-overlay tex-fiber opacity-[0.04]" />
+      <div className="paper-overlay tex-grain opacity-[0.05]" />
     </div>
   )
 }
