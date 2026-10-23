@@ -4,11 +4,11 @@ import { Ornament } from './Ornament'
 import { useEnter } from '../hooks/useReveal'
 import { EASE } from '../lib/motion'
 
-const NAME = 'Адиля'
+const NAME = 'Adilya'
 
 /**
- * Каждая буква имени сидит чуть криво и появляется в своё время:
- * так имя выглядит выложенным руками, а не набранным по сетке.
+ * Each letter has a slight jitter and its own timing,
+ * so the name feels assembled by hand rather than typed on a rigid grid.
  */
 const LETTER_JITTER = [
   { rotate: -2.4, y: 5, delay: 0, duration: 1.08 },
@@ -16,9 +16,10 @@ const LETTER_JITTER = [
   { rotate: -0.9, y: 3, delay: 0.06, duration: 1.16 },
   { rotate: 2.2, y: -2, delay: 0.2, duration: 0.9 },
   { rotate: -1.4, y: 6, delay: 0.14, duration: 1.22 },
+  { rotate: 1.1, y: -3, delay: 0.18, duration: 0.98 },
 ]
 
-/** Порядок появления строк на первом экране — сбитый, а не метрономный. */
+/** Staggered reveal order for the hero screen. */
 const DELAY = {
   eyebrow: 0.08,
   letters: 0.32,
@@ -46,7 +47,7 @@ export function Hero() {
       <Sparkle className="absolute left-[13%] top-[21%] h-5 w-5 rotate-[14deg] text-gold/50 sm:h-6 sm:w-6" />
 
       <motion.p {...eyebrow} className="font-hand text-lg text-ink-faint sm:text-xl">
-        открытка без повода
+        a card for no reason
       </motion.p>
 
       <h1
@@ -102,7 +103,7 @@ export function Hero() {
           {...tagline}
           className="font-hand text-2xl text-rose sm:text-3xl lg:text-4xl"
         >
-          ты лучшая подруга
+          you're the best friend
         </motion.p>
 
         <motion.div {...squiggle}>
@@ -121,12 +122,12 @@ export function Hero() {
         {...greeting}
         className="mt-8 max-w-xl text-balance text-[0.98rem] leading-relaxed text-ink-soft sm:mt-10 sm:text-lg"
       >
-        Я долго думал, как сказать это вслух, и в итоге просто собрал слова здесь.
-        Тут нет повода и нет даты — только то, что мне давно хотелось тебе сказать.
+        I spent a long time thinking about how to say this out loud, and in the end, I just gathered the words here.
+        There's no special occasion and no date — just what I've wanted to tell you for so long.
       </motion.p>
 
       <motion.div {...hint} className="mt-12 flex flex-col items-center gap-1 sm:mt-14">
-        <span className="font-hand text-lg text-ink-faint">листай</span>
+        <span className="font-hand text-lg text-ink-faint">scroll</span>
         <motion.span
           animate={reduced ? undefined : { y: [0, 7, 0] }}
           transition={

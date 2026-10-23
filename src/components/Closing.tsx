@@ -12,13 +12,13 @@ export function Closing() {
 
   return (
     <section className="relative mx-auto w-full max-w-3xl px-5 py-24 sm:px-6 sm:py-32">
-      {/* Послание лежит отдельным листом, приклеенным скотчем.
-          Текст выключен влево, как в настоящем письме, подпись — справа. */}
+      {/* The message sits as a separate sheet, taped down.
+          Left-aligned like a real letter, signature on the right. */}
       <div className="tex-scrap relative -rotate-[0.7deg] rounded-[16px 40px 18px 36px] bg-card-warm px-6 py-11 shadow-scrap-c sm:px-12 sm:py-14">
         <Tape className="-left-4 -top-4 h-7 w-28 rotate-[-7deg] text-terracotta" />
 
         <motion.p {...eyebrow} className="font-hand text-lg text-ink-soft sm:text-xl">
-          последнее
+          one last thing
         </motion.p>
 
         <motion.div
@@ -26,12 +26,12 @@ export function Closing() {
           className="mt-7 flex flex-col gap-6 font-display text-[1.3rem] leading-[1.72] text-ink sm:mt-9 sm:gap-7 sm:text-[1.55rem] lg:text-[1.7rem]"
         >
           <p className="max-w-[46ch]">
-            Спасибо, что ты есть. За смех, за разговоры ни о чём до самого утра,
-            за то, что можно позвонить в любой момент и ничего не объяснять.
+            Thank you for being you. For the laughter, for the conversations about everything and nothing until morning comes,
+            for knowing that I can call anytime without having to explain anything.
           </p>
           <p className="max-w-[46ch] italic text-ink-soft">
-            Рядом с тобой становится тише внутри. Так получается не с каждым,
-            и я очень рад, что это случилось со мной.
+            Around you, things get quieter inside. That doesn't happen with everyone,
+            and I am so grateful that it happened with me.
           </p>
         </motion.div>
 
@@ -43,14 +43,14 @@ export function Closing() {
           {...farewell}
           className="mt-7 max-w-[38ch] font-hand text-xl text-rose sm:text-2xl"
         >
-          Это не повод и не дата. Просто хотел тебе это сказать.
+          This isn't an occasion or a date. I just wanted to say it.
         </motion.p>
 
         <motion.p
           {...signature}
           className="mt-10 text-right font-hand text-lg text-ink-soft sm:text-xl"
         >
-          От Ануара
+          From Anuar
         </motion.p>
       </div>
     </section>

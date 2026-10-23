@@ -44,7 +44,7 @@ export function ComplimentCard({ compliment, layout }: ComplimentCardProps) {
       {layout.tape ? <Tape className={layout.tape} /> : null}
 
       <span className="font-hand text-base leading-none text-rose">
-        &#8470;{Number(compliment.index)}
+        No. {Number(compliment.index)}
       </span>
 
       <h3 className="mt-3 font-display text-[1.2rem] font-medium leading-snug text-ink sm:text-[1.35rem]">

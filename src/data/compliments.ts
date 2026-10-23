@@ -1,5 +1,5 @@
 export type Compliment = {
-  /** Порядковый номер для декоративной нумерации карточки. */
+  /** Sequential index for decorative card numbering. */
   index: string
   title: string
   note: string
@@ -8,42 +8,42 @@ export type Compliment = {
 export const compliments: Compliment[] = [
   {
     index: '01',
-    title: 'С тобой всегда спокойно',
-    note: 'Как будто можно наконец выдохнуть и не держать лицо.',
+    title: "With you, there's always peace",
+    note: "Like I can finally exhale and not have to keep up a front.",
   },
   {
     index: '02',
-    title: 'Ты делаешь обычные дни особенными',
-    note: 'Даже короткое сообщение среди недели меняет настроение.',
+    title: 'You make ordinary days special',
+    note: 'Even a short message in the middle of the week changes my whole mood.',
   },
   {
     index: '03',
-    title: 'Рядом с тобой хочется улыбаться',
-    note: 'Ты заражаешь этим легко и совсем без усилий.',
+    title: 'Around you, smiling comes naturally',
+    note: 'Your warmth is effortless and completely contagious.',
   },
   {
     index: '04',
-    title: 'Ты настоящая',
-    note: 'Без масок и без игры. Такой человек — редкость.',
+    title: 'You are genuine',
+    note: 'No masks, no games. A person like you is truly rare.',
   },
   {
     index: '05',
-    title: 'С тобой легко быть собой',
-    note: 'Можно быть уставшим, глупым, любым — и это нормально.',
+    title: "It's easy to be myself with you",
+    note: "I can be tired, foolish, anything at all — and it's totally okay.",
   },
   {
     index: '06',
-    title: 'Твоя поддержка много значит',
-    note: 'Ты всегда находишь слова. Или просто молчишь рядом.',
+    title: 'Your support means the world',
+    note: 'You always find the right words. Or you simply stay quietly by my side.',
   },
   {
     index: '07',
-    title: 'Ты делаешь мир чуть добрее',
-    note: 'Просто тем, что ты в нём есть.',
+    title: 'You make the world a little kinder',
+    note: 'Simply by being a part of it.',
   },
   {
     index: '08',
-    title: 'С тобой есть о чём помолчать',
-    note: 'Хорошая тишина дороже многих разговоров.',
+    title: 'Good silence comes easily with you',
+    note: 'A comfortable quiet is worth more than a thousand conversations.',
   },
 ]

@@ -17,14 +17,14 @@ export function Compliments() {
         <Sparkle className="absolute -top-3 right-[10%] h-5 w-5 -rotate-12 text-gold/50 sm:h-6 sm:w-6" />
 
         <motion.p {...eyebrow} className="font-hand text-lg text-ink-faint sm:text-xl">
-          немного личного
+          a little personal
         </motion.p>
 
         <motion.h2
           {...heading}
           className="mt-4 max-w-2xl -rotate-[0.6deg] text-balance font-display text-[2.1rem] leading-tight text-ink sm:mt-5 sm:text-[2.9rem] lg:text-[3.4rem]"
         >
-          Причины, по которым с тобой хорошо
+          Reasons why it's so good to be around you
         </motion.h2>
 
         <motion.div {...underline}>
